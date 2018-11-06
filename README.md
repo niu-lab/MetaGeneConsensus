@@ -61,13 +61,13 @@ LI Ruilin, SHANG Qiuming, HAN Xinyin, ZHANG Yu, ZHU Haidong, LI Weizh
 
 References
 --------
-  [1] Rho M, Tang H, Ye Y. FragGeneScan: predicting genes in short and error-prone reads. Springer US, 2015.
-  [2] Hyatt D, Chen G, LoCascio PF, et al. Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinformatics 2010;11:119.
-  [3] Noguchi H, Taniguchi T,Itoh T. MetaGeneAnnotator: Detecting Species-Specific Patterns of Ribosomal Binding Site for Precise Gene Prediction in Anonymous Prokaryotic and Phage Genomes. DNA Research,15,6(2008-10-21) 2008;15:387-96.
-  [4] Hoff KJ, Lingner T, Meinicke P, et al. Orphelia: predicting genes in metagenomic sequencing reads. Nucleic Acids Research 2009;37:101-5.
-  [5] Delcher AL, Bratke KA, Powers EC, et al. Identifying bacterial genes and endosymbiont DNA with Glimmer. Bioinformatics 2007;23:673.
-  [6] Lomsadze A, Gemayel K, Tang S, Borodovsky M. Modeling leaderless transcription and atypical genes results in more accurate gene prediction in prokaryotes. Genome Research 2018;28:1079.
-  [7] FU L, NIU B, ZHU Z, , et al. CD-HIT: accelerated for clustering the next-generation sequencing data. Bioinformatics 2012;28:3150-2.
+    [1] Rho M, Tang H, Ye Y. FragGeneScan: predicting genes in short and error-prone reads. Springer US, 2015.
+    [2] Hyatt D, Chen G, LoCascio PF, et al. Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinformatics 2010;11:119.
+    [3] Noguchi H, Taniguchi T,Itoh T. MetaGeneAnnotator: Detecting Species-Specific Patterns of Ribosomal Binding Site for Precise Gene Prediction in Anonymous Prokaryotic and Phage Genomes. DNA Research,15,6(2008-10-21) 2008;15:387-96.
+    [4] Hoff KJ, Lingner T, Meinicke P, et al. Orphelia: predicting genes in metagenomic sequencing reads. Nucleic Acids Research 2009;37:101-5.
+    [5] Delcher AL, Bratke KA, Powers EC, et al. Identifying bacterial genes and endosymbiont DNA with Glimmer. Bioinformatics 2007;23:673.
+    [6] Lomsadze A, Gemayel K, Tang S, Borodovsky M. Modeling leaderless transcription and atypical genes results in more accurate gene prediction in prokaryotes. Genome Research 2018;28:1079.
+    [7] FU L, NIU B, ZHU Z, , et al. CD-HIT: accelerated for clustering the next-generation sequencing data. Bioinformatics 2012;28:3150-2.
 LICENSE AND COPYRIGHT
 
 Copyright (C) 2018 Ruilin Li et al.
