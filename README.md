@@ -54,7 +54,7 @@ For user support please email lirl@sccas.cn
 
 Citation
 --------
-LI Ruilin, SHANG Qiuming, HAN Xinyin, ZHANG Yu, ZHU Haidong, LI Weizhong, NIU Beifang*.Benchmarking of Gene Prediction Software for Metagenomic Long Fragments. Journal of Computer Applications (In Chinese),2018 (Retirement)
+LI Ruilin, SHANG Qiuming, HAN Xinyin, ZHANG Yu, ZHU Haidong, LI Weizhong, NIU Beifang*. Benchmarking of Gene Prediction Software for Metagenomic Long Fragments. Journal of Computer Applications (In Chinese), 2018 (Retirement)
 
 References
 --------
