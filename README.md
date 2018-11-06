@@ -20,6 +20,11 @@ Options:
 Install
 -------
 
+Environment configuration:
+    x86_64-linux
+    gcc (GCC) 4.8+ (Run `gcc --version` to check.)
+    perl 5.24+ (Run `perl --version` to check.)
+
 Clone the gclust repos, and build the `gclust` binary:
 
     git clone https://github.com/niu-lab/MetaGeneConsensus
