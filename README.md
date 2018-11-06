@@ -6,9 +6,9 @@ Usage
 -----
 
         Version 1.0
-        Usage: ./mgc [options]
+        Usage: ./mgc <command>
 
-Options:
+Command:
 
        -FragGeneScan        Show the help of FragGeneScan
        -Prodigal            Show the help of Prodigal
