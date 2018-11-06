@@ -13,54 +13,55 @@ use Getopt::Long; # Getopt::Long - Extended processing of command line options
 #use Preprocess::Cleaning;
 #use ptrbc::Classification;
 #use ptrbc::Analysis;
-use lib::Mapping;
-use lib::Cleaning;
-use lib::BP;
-use lib::RF;
-use lib::XGBoost;
-use lib::SVM;
-use lib::KNN;
-use lib::PRED;
+use lib::FragGeneScan;
+use lib::Prodigal;
+use lib::MetaGeneAnnotator;
+use lib::Orphelia;
+use lib::Glimmer3;
+use lib::GeneMarkS;  # GeneMarkS-2
+use lib::cd_hit; # cd-hit
+#use lib::validate;
+#use lib::consensus;
 
 my $subCmd = shift;
-my %cmds = map { ($_, 1) } qw/ map clean bp rf xgboost svm knn pred help/;
+my %cmds = map { ($_, 1) } qw/ FragGeneScan Prodigal MetaGeneAnnotator Orphelia Glimmer3 GeneMarkS-2 cd-hit validate  help/;
 unless (defined $subCmd) { die help_text();};
 unless (exists $cmds{$subCmd}){
 	warn 'Please give the valid sub command!', '\n';
 	die help_text();
 }
 SWITCH:{
-	$subCmd eq 'map'   && do { Mapping->new();  last SWITCH; };
-	$subCmd eq 'clean' && do { Cleaning->new();  last SWITCH; };
-	$subCmd eq 'bp' && do { BP->new();  last SWITCH; };
-	$subCmd eq 'rf' && do { RF->new();  last SWITCH; };
-	$subCmd eq 'xgboost' && do { XGBoost->new();  last SWITCH; };
-	$subCmd eq 'svm' && do { SVM->new();  last SWITCH; };
-	$subCmd eq 'knn' && do { KNN->new();  last SWITCH; };
-	$subCmd eq 'pred' && do { PRED->new();  last SWITCH; };
-	#$subCmd eq 'classfy' && do { Classification->new(); last SWITCH; };
+	$subCmd eq 'FragGeneScan'   && do { FragGeneScan->new();  last SWITCH; };
+	$subCmd eq 'Prodigal' && do { Prodigal->new();  last SWITCH; };
+	$subCmd eq 'MetaGeneAnnotator' && do { MetaGeneAnnotator->new();  last SWITCH; };
+	$subCmd eq 'Orphelia' && do { Orphelia->new();  last SWITCH; };
+	$subCmd eq 'Glimmer3' && do { Glimmer3->new();  last SWITCH; };
+	$subCmd eq 'GeneMarkS-2' && do { GeneMarkS->new();  last SWITCH; };
+	$subCmd eq 'cd-hit' && do { cd_hit->new();  last SWITCH; };
+#	$subCmd eq 'validate' && do { validate->new();  last SWITCH; };
+#	$subCmd eq 'consensus' && do { consensus->new(); last SWITCH; };
 	#$subCmd eq 'analysis'   && do { Analysis->new();  last SWITCH; };
 }
 
 sub help_text{
 	return <<HELP
-Program: autodc - Automatic Data Cleaning Toolkit.
+Program: mgc - MetaGeneConsensus
 Version: $VERSION
-Authors: Beifang Niu, Deqing Wang, Ruilin Li etc.
+Authors: Ruilin Li et al.
 
-Usage: ptrbc <command> [options]
+Usage: mgc <command>
 
 Key commands:
 
-map          -- Transform the raw data to identifiable format
-clean        -- Data cleaning and got clean data
-bp           -- Run BP method
-rf           -- Run RF method
-xgboost      -- Run XGBoost method
-svm          -- Run SVM method
-knn          -- Run KNN method
-pred         -- Predict the volume of RBCs using the trained models
-help         -- Show this message
+FragGeneScan        --Show the help of FragGeneScan
+Prodigal            --Show the help of Prodigal
+MetaGeneAnnotator   --Show the help of MetaGeneAnnotator
+Orphelia            --Show the help of Orphelia
+Glimmer3            --Show the help of Glimmer3
+GeneMarkS-2         --Show the help of GeneMarkS-2
+cd-hit              --Show the help of cd-hit
+validate            --Identify whether a gene is true or false
+help                --Show this message
 
 SUPPORT 
 For user support please mail lirl\@sccas.cn
