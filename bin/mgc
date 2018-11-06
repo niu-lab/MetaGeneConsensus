@@ -1,0 +1,76 @@
+#! /usr/bin/perl 
+use strict;
+use warnings;
+
+our $VERSION='V0.1';
+
+use Carp; # Carp - alternative warn and die for modules
+use IO::File; # IO::File - supply object methods for filehandles
+use FileHandle; # FileHandle - supply object methods for filehandles
+use Getopt::Long; # Getopt::Long - Extended processing of command line options
+
+#use Preprocess::Mapping;
+#use Preprocess::Cleaning;
+#use ptrbc::Classification;
+#use ptrbc::Analysis;
+use lib::Mapping;
+use lib::Cleaning;
+use lib::BP;
+use lib::RF;
+use lib::XGBoost;
+use lib::SVM;
+use lib::KNN;
+use lib::PRED;
+
+my $subCmd = shift;
+my %cmds = map { ($_, 1) } qw/ map clean bp rf xgboost svm knn pred help/;
+unless (defined $subCmd) { die help_text();};
+unless (exists $cmds{$subCmd}){
+	warn 'Please give the valid sub command!', '\n';
+	die help_text();
+}
+SWITCH:{
+	$subCmd eq 'map'   && do { Mapping->new();  last SWITCH; };
+	$subCmd eq 'clean' && do { Cleaning->new();  last SWITCH; };
+	$subCmd eq 'bp' && do { BP->new();  last SWITCH; };
+	$subCmd eq 'rf' && do { RF->new();  last SWITCH; };
+	$subCmd eq 'xgboost' && do { XGBoost->new();  last SWITCH; };
+	$subCmd eq 'svm' && do { SVM->new();  last SWITCH; };
+	$subCmd eq 'knn' && do { KNN->new();  last SWITCH; };
+	$subCmd eq 'pred' && do { PRED->new();  last SWITCH; };
+	#$subCmd eq 'classfy' && do { Classification->new(); last SWITCH; };
+	#$subCmd eq 'analysis'   && do { Analysis->new();  last SWITCH; };
+}
+
+sub help_text{
+	return <<HELP
+Program: autodc - Automatic Data Cleaning Toolkit.
+Version: $VERSION
+Authors: Beifang Niu, Deqing Wang, Ruilin Li etc.
+
+Usage: ptrbc <command> [options]
+
+Key commands:
+
+map          -- Transform the raw data to identifiable format
+clean        -- Data cleaning and got clean data
+bp           -- Run BP method
+rf           -- Run RF method
+xgboost      -- Run XGBoost method
+svm          -- Run SVM method
+knn          -- Run KNN method
+pred         -- Predict the volume of RBCs using the trained models
+help         -- Show this message
+
+SUPPORT 
+For user support please mail lirl\@sccas.cn
+
+HELP
+}
+
+
+1;
+
+
+
+
