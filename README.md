@@ -6,7 +6,7 @@ Usage
 -----
 
         Version 1.0
-        Usage: ./mgc [options] <genomes-file>
+        Usage: ./mgc [options]
 
 Options:
 
@@ -26,12 +26,13 @@ Clone the gclust repos, and build the `gclust` binary:
     cd MetaGeneConsensus
 
 Make sure you have installed the following tools.
-    1. FragGeneScan: https://github.com/COL-IU/FragGeneScan
-    2. Prodigal: https://github.com/COL-IU/FragGeneScan
-    3. MetaGeneAnnotator: http://metagene.cb.k.u-tokyo.ac.jp/metagene/download_mga.html
-    4. Orphelia: http://orphelia.gobics.de/
-    5. Glimmer3: http://ccb.jhu.edu/software/glimmer/index.shtml
-    6. GeneMarkS-2: http://exon.gatech.edu/GeneMark/
+
+     1. FragGeneScan: https://github.com/COL-IU/FragGeneScan
+     2. Prodigal: https://github.com/COL-IU/FragGeneScan
+     3. MetaGeneAnnotator: http://metagene.cb.k.u-tokyo.ac.jp/metagene/download_mga.html
+     4. Orphelia: http://orphelia.gobics.de/
+     5. Glimmer3: http://ccb.jhu.edu/software/glimmer/index.shtml
+     6. GeneMarkS-2: http://exon.gatech.edu/GeneMark/
 
 To install this module, run the following commands:
 
