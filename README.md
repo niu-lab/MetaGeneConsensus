@@ -19,7 +19,7 @@ Command:
        -cd-hit              Show the help of cd-hit
        -validate            Identify whether a gene is true or false 
 
-Install
+Prepare
 -------
 
 Environment configuration:
