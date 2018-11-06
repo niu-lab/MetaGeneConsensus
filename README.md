@@ -36,7 +36,7 @@ Clone the gclust repos, and build the `gclust` binary:
 Make sure you have installed the following tools.
 
   1. FragGeneScan: <https://github.com/COL-IU/FragGeneScan>
-  2. Prodigal: <https://github.com/COL-IU/FragGeneScan>
+  2. Prodigal: <https://github.com/hyattpd/prodigal>
   3. MetaGeneAnnotator: <http://metagene.cb.k.u-tokyo.ac.jp/metagene/download_mga.html>
   4. Orphelia: <http://orphelia.gobics.de/>
   5. Glimmer3: <http://ccb.jhu.edu/software/glimmer/index.shtml>
