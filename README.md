@@ -45,7 +45,8 @@ Make sure you have installed the following tools.
 
 To install this module, run the following commands:
 
-        perl Makefile.PL
+        cd MetaGeneConsensus
+	perl Makefile.PL
         make
         make test
         make install 
