@@ -33,7 +33,9 @@ Clone the gclust repos, and build the `gclust` binary:
      git clone https://github.com/niu-lab/MetaGeneConsensus
      cd MetaGeneConsensus
 
-Make sure you have installed the following tools.
+Statement
+---------
+The tools used in the packages/ directroy are all copied from the following links. Please add all the bottom references of this README.md file. Make sure you have installed the following tools before you install this perl module.
 
   1. FragGeneScan: <https://github.com/COL-IU/FragGeneScan>
   2. Prodigal: <https://github.com/hyattpd/prodigal>
@@ -43,6 +45,8 @@ Make sure you have installed the following tools.
   6. GeneMarkS-2: <http://exon.gatech.edu/GeneMark/>
   7. CD-HIT: <https://github.com/weizhongli/cdhit/releases>
 
+Install
+--------
 To install this module, run the following commands:
 
         cd MetaGeneConsensus
