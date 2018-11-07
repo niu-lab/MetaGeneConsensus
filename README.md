@@ -19,7 +19,7 @@ Command:
        -cd-hit              Show the help of cd-hit
        -validate            Identify whether a gene is true or false 
 
-Prepare
+System Requirements
 -------
 
 Environment configuration:
@@ -28,10 +28,6 @@ Environment configuration:
      gcc (GCC) 4.8+ (Run "gcc --version" to check.)
      perl 5.24+ (Run "perl --version" to check.)
 
-Clone the gclust repos, and build the `gclust` binary:
-
-     git clone https://github.com/niu-lab/MetaGeneConsensus
-     cd MetaGeneConsensus
 
 Statement
 ---------
@@ -45,8 +41,14 @@ The tools used in the packages/ directroy are all copied from the following link
   6. GeneMarkS-2: <http://exon.gatech.edu/GeneMark/>
   7. CD-HIT: <https://github.com/weizhongli/cdhit/releases>
 
-Install
+Installation
 --------
+
+Clone the gclust repos, and build the `gclust` binary:
+
+     git clone https://github.com/niu-lab/MetaGeneConsensus
+     cd MetaGeneConsensus
+
 To install this module, run the following commands:
 
         cd MetaGeneConsensus
