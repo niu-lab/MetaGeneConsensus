@@ -31,7 +31,7 @@ Environment configuration:
 
 Statement
 ---------
-The tools used in the packages/ directroy are all copied from the following links. Please add all the bottom references of this README.md file. Make sure you have installed the following tools before you install this perl module.
+The tools used in the packages/ directroy are all copied from the following links. Please add all the bottom references of this README.md file when you using this perl module. Make sure you have installed the following tools before you install or get them from packages/ directroy.
 
   1. FragGeneScan: <https://github.com/COL-IU/FragGeneScan>
   2. Prodigal: <https://github.com/hyattpd/prodigal>
