@@ -19,7 +19,8 @@ Command:
        frame               --Show the help of how to transform the ORFs into unified coordinates style
        protein             --Show the help of how to generate protein sequences according to ORFs
        cd-hit              --Show the help of cd-hit
-       validate            --Identify whether a gene is true or false and give statistical results 
+       validate            --Identify whether a gene is true or false and give statistical results
+       consensus           --Show the help of consensus algorithm for gene prediction 
 
 System Requirements
 -------
