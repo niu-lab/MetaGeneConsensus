@@ -10,8 +10,10 @@
 #
 #my $exe = $script_dir . "metagene";
 my $input = shift; # fasta file
+my $output_raw = shift; # in fact, the output_raw is the input file
 my $output = shift;
 die unless ($input and $output);
+print "Fasta file: $output_raw\nInput ORFs: $input\nCorrected ORfs: $output\n";
 
 my %genetic_code = (
   'UUU' => 'F',  'UCU' => 'S',  'UAU' => 'Y',  'UGU' => 'C',
@@ -39,8 +41,8 @@ my %genetic_code = (
 
 #my $output_raw = "$output.raw";
 #my $cmd = `$exe $input > $output_raw`;
-my $output_raw = shift; # in fact, the output_raw is the input file
-print $input."|".$output."|".$output_raw."\n";
+#my $output_raw = shift; # in fact, the output_raw is the input file
+#print $input."|".$output."|".$output_raw."\n";
 my $raw_format =<<EOD;
 # gi|29839769|ref|NC_003361.3| Chlamydophila caviae GPIC, complete genome
 # gc = 0.392229
