@@ -1,6 +1,6 @@
 #####
 # Authors: Ruilin Li et al.
-# This script changes from Weizhong Li's script of transforming ORFs to proteins.
+# This script changes from Dr. Weizhong Li's script of transforming ORFs to proteins.
 #####
 
 #!/usr/bin/perl
