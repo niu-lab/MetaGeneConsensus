@@ -191,13 +191,17 @@ PERL_ARCHIVEDEP    =
 PERL_ARCHIVE_AFTER = 
 
 
-TO_INST_PM = lib/FragGeneScan.pm \
+TO_INST_PM = lib/Consensus.pm \
+	lib/FragGeneScan.pm \
+	lib/Frame.pm \
 	lib/GeneMarkS.pm \
 	lib/Glimmer3.pm \
 	lib/MetaGeneAnnotator.pm \
 	lib/MetaGeneConsensus.pm \
 	lib/Orphelia.pm \
 	lib/Prodigal.pm \
+	lib/Protein.pm \
+	lib/Validate.pm \
 	lib/cd_hit.pm
 
 
@@ -882,13 +886,17 @@ ppd :
 
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
+	  'lib/Consensus.pm' 'blib/lib/Consensus.pm' \
 	  'lib/FragGeneScan.pm' 'blib/lib/FragGeneScan.pm' \
+	  'lib/Frame.pm' 'blib/lib/Frame.pm' \
 	  'lib/GeneMarkS.pm' 'blib/lib/GeneMarkS.pm' \
 	  'lib/Glimmer3.pm' 'blib/lib/Glimmer3.pm' \
 	  'lib/MetaGeneAnnotator.pm' 'blib/lib/MetaGeneAnnotator.pm' \
 	  'lib/MetaGeneConsensus.pm' 'blib/lib/MetaGeneConsensus.pm' \
 	  'lib/Orphelia.pm' 'blib/lib/Orphelia.pm' \
 	  'lib/Prodigal.pm' 'blib/lib/Prodigal.pm' \
+	  'lib/Protein.pm' 'blib/lib/Protein.pm' \
+	  'lib/Validate.pm' 'blib/lib/Validate.pm' \
 	  'lib/cd_hit.pm' 'blib/lib/cd_hit.pm' 
 	$(NOECHO) $(TOUCH) pm_to_blib
 

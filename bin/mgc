@@ -22,11 +22,11 @@ use lib::GeneMarkS;  # GeneMarkS-2
 use lib::cd_hit; # cd-hit
 use lib::Frame;
 use lib::Protein;
-#use lib::validate;
-#use lib::consensus;
+use lib::Validate;
+use lib::Consensus;
 
 my $subCmd = shift;
-my %cmds = map { ($_, 1) } qw/ FragGeneScan Prodigal MetaGeneAnnotator Orphelia Glimmer3 GeneMarkS-2 frame protein cd-hit validate  help/;
+my %cmds = map { ($_, 1) } qw/ FragGeneScan Prodigal MetaGeneAnnotator Orphelia Glimmer3 GeneMarkS-2 frame protein cd-hit validate consensus help/;
 unless (defined $subCmd) { die help_text();};
 unless (exists $cmds{$subCmd}){
 	warn 'Please give the valid sub command!', '\n';
@@ -42,9 +42,8 @@ SWITCH:{
 	$subCmd eq 'frame' && do { Frame->new();  last SWITCH; };
         $subCmd eq 'protein' && do { Protein->new();  last SWITCH; };
         $subCmd eq 'cd-hit' && do { cd_hit->new();  last SWITCH; };
-#	$subCmd eq 'validate' && do { validate->new();  last SWITCH; };
-#	$subCmd eq 'consensus' && do { consensus->new(); last SWITCH; };
-	#$subCmd eq 'analysis'   && do { Analysis->new();  last SWITCH; };
+	$subCmd eq 'validate' && do { Validate->new();  last SWITCH; };
+	$subCmd eq 'consensus' && do { Consensus->new(); last SWITCH; };
 }
 
 sub help_text{
@@ -66,7 +65,8 @@ GeneMarkS-2         --Show the help of GeneMarkS-2
 frame               --Show the help of how to transform the ORFs into unified coordinates style
 protein             --Show the help of how to generate protein sequences according to ORFs
 cd-hit              --Show the help of cd-hit
-validate            --Identify whether a gene is true or false
+validate            --Identify whether a gene is true or false and give statistical results
+consensus           --Show the help of consensus algorithm for gene prediction
 help                --Show this message
 
 SUPPORT 
