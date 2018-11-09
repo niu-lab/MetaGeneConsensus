@@ -20,11 +20,13 @@ use lib::Orphelia;
 use lib::Glimmer3;
 use lib::GeneMarkS;  # GeneMarkS-2
 use lib::cd_hit; # cd-hit
+use lib::Frame;
+use lib::Protein;
 #use lib::validate;
 #use lib::consensus;
 
 my $subCmd = shift;
-my %cmds = map { ($_, 1) } qw/ FragGeneScan Prodigal MetaGeneAnnotator Orphelia Glimmer3 GeneMarkS-2 cd-hit validate  help/;
+my %cmds = map { ($_, 1) } qw/ FragGeneScan Prodigal MetaGeneAnnotator Orphelia Glimmer3 GeneMarkS-2 frame protein cd-hit validate  help/;
 unless (defined $subCmd) { die help_text();};
 unless (exists $cmds{$subCmd}){
 	warn 'Please give the valid sub command!', '\n';
@@ -37,7 +39,9 @@ SWITCH:{
 	$subCmd eq 'Orphelia' && do { Orphelia->new();  last SWITCH; };
 	$subCmd eq 'Glimmer3' && do { Glimmer3->new();  last SWITCH; };
 	$subCmd eq 'GeneMarkS-2' && do { GeneMarkS->new();  last SWITCH; };
-	$subCmd eq 'cd-hit' && do { cd_hit->new();  last SWITCH; };
+	$subCmd eq 'frame' && do { Frame->new();  last SWITCH; };
+        $subCmd eq 'protein' && do { Protein->new();  last SWITCH; };
+        $subCmd eq 'cd-hit' && do { cd_hit->new();  last SWITCH; };
 #	$subCmd eq 'validate' && do { validate->new();  last SWITCH; };
 #	$subCmd eq 'consensus' && do { consensus->new(); last SWITCH; };
 	#$subCmd eq 'analysis'   && do { Analysis->new();  last SWITCH; };
@@ -59,6 +63,8 @@ MetaGeneAnnotator   --Show the help of MetaGeneAnnotator
 Orphelia            --Show the help of Orphelia
 Glimmer3            --Show the help of Glimmer3
 GeneMarkS-2         --Show the help of GeneMarkS-2
+frame               --Show the help of how to transform the ORFs into unified coordinates style
+protein             --Show the help of how to generate protein sequences according to ORFs
 cd-hit              --Show the help of cd-hit
 validate            --Identify whether a gene is true or false
 help                --Show this message
